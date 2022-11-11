@@ -1,0 +1,203 @@
+/* card config */
+
+.arumation {
+    background-size: cover;
+    width: 350px;
+    height: 550px;
+    border-radius: 3%;
+}
+
+.carta {
+    margin: 283px -145px 0 130px;
+    width: 350px;
+    height: 550px;
+    border-radius: 3%;
+    z-index: 1;
+    float: right;
+}
+
+#background-carta{
+    position: absolute;
+    margin: -542px 0 0 -2px;
+    background-size: cover;
+    z-index: -2;
+    width: 355px;
+    height: 550px;
+    border-radius: 3%;
+    border: 2px solid black;
+}
+
+#backcarta-img {
+    position: absolute;
+    margin: -2px 0 0 -2px;
+    background-size: cover;
+    z-index: -2;
+    width: 350px;
+    height: 550px;
+    border-radius: 3%;
+    border: 2px solid black;
+}
+
+.nome-carta {
+    width: 80%;
+    height: 10%;
+    position: absolute;
+    text-align: center;
+    font-size: large;
+    color: floralwhite;
+    font-weight: bolder;
+    padding-top: 14px;
+    border-radius: 8px;
+    word-wrap: break-word;
+    margin: 12px 0 0 33px;
+    z-index: 1;
+}
+
+#top-name-config,
+#top-name-config-img,
+#name-border {
+    position: absolute;
+    width: 325px;
+    height: 50px;
+    opacity: 1;
+}
+
+#name-border{
+    margin: 15px 0 0 13px;
+}
+
+#top-name-config {
+    margin: 14px 0 0 -16px;
+}
+
+#top-name-config-img {
+    margin: 0;
+    z-index: -1;
+}
+.custo-mana {
+    font-size: 20px;
+    margin: 111px 0 0 311px;
+    width: 11%;
+    text-align: center;
+    color: floralwhite;
+    font-weight: bolder;
+    border-radius: 8px 8px 8px 8px;
+    z-index: 2;
+    position: absolute;
+}
+
+.topo-carta {
+    height: 10%;
+}
+
+.imagem-carta {
+    border: 2px solid black;
+    height: 70%;
+    width: 94%;
+    margin: 56px 0 0 10px;
+}
+
+.imagem-carta img {
+    height: 100%;
+    width: 100%;
+}
+
+.rodape-carta {
+    height: 45%;
+    padding-top: 3%;
+}
+
+#forma-icon{
+    width: 19%;
+    height: 12%;
+    position: absolute;
+    z-index: 2;
+    margin: 441px 0px 0px 2px;
+}
+
+#icon {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    color: floralwhite;
+    font-weight: bolder;
+    padding-top: 35px;
+    border-radius: 35px;
+}
+
+.iIcon {
+    width: 100%;
+    height: 100%;
+}
+
+#icon-img{
+    width: 100%;
+    height: 100%;
+    border-radius: 35px;
+}
+
+#classI {
+   width: 143px;
+   height: 42px;
+   position: absolute;
+   text-align: center;
+   color: floralwhite;
+   font-weight: bolder;
+   padding-top: 5px;
+   border-radius: 0px 47px 0px 0px;
+   margin: -423.8px 0 0 11px;
+   z-index: 1;
+}
+
+#class-img {
+    width: 100.2%;
+    height: 111.7%;
+    border-radius: 0px 47px 0px 0px;
+    margin: -226px 0 -20px 0px;
+}
+
+.classe-carta {
+    margin: -419px 0 0 9.9px;
+    position: absolute;
+    z-index: 2;
+    height: 42px;
+    width: 145px;
+    border-radius: 0px 47px 0px 0px;
+}
+
+#class-name {
+    margin: 6px 0 0 0px;
+    text-align: center;
+    color: floralwhite;
+}
+
+.config-status {
+    color: floralwhite;
+    font-weight: bold;
+    word-wrap: normal;
+    font-size: 15px;
+    margin: 16px 0 0 8px;
+    width: 328px;
+    height: 21px;
+}
+
+#atk {
+    margin: 10.5px 0px 0 23px;
+}
+
+#atk-value {
+    margin: -20px 0 0 65px;
+}
+
+#def {
+    margin: -20px 110px 0 210px;
+}
+
+#def-value {
+    margin: -20px 0 0 251px;
+}
+
+#stats-style-select7{
+    margin: -10px 0 0 48px;
+    width: 61.2%;
+}

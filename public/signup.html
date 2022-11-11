@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8' />
+
+        <title>Sign Up</title>
+
+        <link href='https://fonts.googleapis.com/css2?family=Monoton&display=swap' rel='stylesheet'/>
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
+        <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'/>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <link rel='stylesheet' href='style3,2.css' />
+    </head>
+
+    <body>
+        <header>
+            <div class='logo'>
+                <h1 id='wel'>Welcome to</h1>
+                <h3>MCG</h3>
+                <h1>(Make your Card Game come to life)</h1>
+                <div class='signup'>
+                    <form action='' id='signup-org' class='signup-org' method='post'>
+                        <table name='table'>
+                            <td>
+                                <li>
+                                    <label>Nickname:</label>
+                                    <input id='nick' name='nickname' type='text' placeholder='User Name'/>
+                                </li>
+                                <li>
+                                    <label for='email'>Email:</label>
+                                    <input id='email' name='email' type='text' placeholder='Email'/>
+                                </li>
+                                <li>
+                                    <label for='pass'>Password:</label>
+                                    <input id='pass' name='password' type='password' placeholder='Password'/>
+                                </li>
+                            </td>
+                        </table>
+                        <br /><br />
+                        <ul>
+                            <button class='button' id='b' type='submit'>Create Account</button>
+                            <p id='p' name = "gtSign">Already have an account?</p>
+                            <button class='btn-01' id='b2' type='button' onclick='location.href = "index.html"'>Sign in</button>
+                        </ul>
+
+                        <p name="msg-1" style="display: none;">Account Register Successful, go to Sign in Page</p>
+                    </form>
+                </div>
+                <!-- signup -->
+            </div>
+            <!-- logo -->
+        </header>
+    </body>
+
+    <script src='https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js'></script>
+    <script src='https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js'></script>
+    <script defer src='https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js'></script>
+
+    <script type='module'>
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js';
+    import { getAuth, createUserWithEmailAndPassword} from 'https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js';
+    import { getFirestore, collection, getDocs, setDoc, addDoc, serverTimestamp, doc} from 'https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js';
+     const firebaseConfig = {
+        apiKey: 'AIzaSyAR61dkpsiGFCQRzCQ4nkAbU0plC-kYslY',
+        authDomain: 'make-cardgame.firebaseapp.com',
+        databaseURL: 'https://make-cardgame-default-rtdb.firebaseio.com',
+        projectId: 'make-cardgame',
+        storageBucket: 'make-cardgame.appspot.com',
+        messagingSenderId: '1016341861949',
+        appId: '1:1016341861949:web:c95383455399adf6597c54',
+        measurementId: 'G-RBP9Q9N1ES'
+
+  };
+
+        const app = initializeApp(firebaseConfig);
+
+        const auth = getAuth(app);
+
+        const db = getFirestore(app);
+
+        const btn = document.getElementById('b');
+
+        
+
+        //getDocs(userRef)
+       // .then(querySnapshot => {
+          //  querySnapshot.docs.forEach(doc => console.log(doc.data()))
+        //})
+        //.catch(console.log)
+
+        btn.addEventListener('click', function () {
+            const form = document.getElementById('signup-org');
+            const auth = getAuth();
+
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+
+                const email = form.elements['email'].value;
+                const password = form.elements['pass'].value;
+                const name = form.elements['nick'].value;
+                console.log('email: ', email);
+                console.log('password: ', password);
+                console.log('name: ', name);
+
+                return createUserWithEmailAndPassword(auth, email, password)
+                    .then(result => {
+                        const uid = result.user.uid;
+
+                        const userRef = collection(db, 'users');
+                        
+                       setDoc(doc(userRef, uid), {
+                            name: name,
+                            email: email,
+                            createdAt: serverTimestamp()
+                        })
+
+                        console.log(uid);  
+
+                        getDocs(userRef)
+                        .then(querySnapshot => {
+                                querySnapshot.docs.forEach(doc => console.log(doc.data()))
+                            })
+                            .catch(console.log)                  
+
+                        document.querySelector('[name= msg-1]').style='display: block;'+
+					'text-align: center;'+
+					'width: 218px;'+
+					'position: absolute;'+
+					'margin: -120px 0px 0px 145px;'+
+					'color: green;'+
+                    'z-index: 2;';
+
+                    document.querySelector('[name= gtSign]').style = 'margin-top: 51px';
+                    })
+                    .catch((e) => alert(e.message));
+            });
+        });
+    </script>
+</html>
