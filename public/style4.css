@@ -1,0 +1,51 @@
+.menu-more {
+    margin: -35px 0 0 222px;
+    width: 40%;
+    text-align: justify;
+    list-style: none;
+}
+
+.name {
+    width: 120%;
+    margin: 30px 0 0 40px;
+    text-align: left;
+}
+
+/* Inicio da configuração do main */
+
+.faq{
+	height: 840px;
+	width: 1000px;
+	margin: 100px auto;
+	border: 2px solid black;
+	border-radius: 5px;
+	padding: 30px;
+	
+}
+
+.main ul, li{
+	list-style: none;
+}
+
+.main ul{
+	padding: 20px;
+}
+
+/* Fim da configuração do main */
+
+
+/* Inicio da configuração do footer */
+
+footer{
+	margin: 150px 0 0 0;
+	background-color: white;
+	padding: 20px 0;
+	border-top: 2px solid #878787;
+}
+
+#license{
+	text-align: center;
+	font-size: 12px;
+}	
+
+/* Fim da configuração do footer */
