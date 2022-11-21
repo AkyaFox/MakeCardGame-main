@@ -6,7 +6,7 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<title>MCG - Card Creation</title>
+		<title>MakeCardGames - Card Creation</title>
 		
 		<!-- Link das fontes ultilizadas de um servidor google -->
 		<link rel="preconnect" href="https://fonts.gstatic.com">
@@ -48,11 +48,11 @@
 			<span class="material-icons" id= "btnIcon">sports_esports</span> Games
 			</a>
 			
-			<a href="../../profile.html">
+			<a id="prof" href="../../profile.html">
 			<span class="material-icons" id= "btnIcon">person</span> Account
 			</a>
 						
-			<ul  class="menu-more">
+			<ul id="menu-more" class="menu-more">
 			<li>
 			<a href="#"> <span class="material-icons">expand_more</span> More </a>
 				<ul>
@@ -117,7 +117,7 @@
 							  <br>
 
 							  <label for="name">Card Name</label>
-							  <input type="text" class="input-text" name="name" id="nome-carta-input" placeholder="Input the Card Name" maxlength="31"> 
+							  <input type="text" class="input-text" name="name" id="nome-carta-input" placeholder="Input the Card Name" maxlength="33"> 
 							  <br>
 
 							  <label id="bNa" for="bName">Name with Border?</label>
@@ -251,7 +251,7 @@
 							<div id="div-classe">
 							</div><label id="cCl" for="nameCl" hidden>Card Class</label>
 						</div> 
-							  <input type="text" class="input-text" name="nameCl" id="nome-classe-input" placeholder="Input the Class Name" maxlength="15"> 
+							  <input type="text" class="input-text" name="nameCl" id="nome-classe-input" placeholder="Input the Class Name" maxlength="20"> 
 
 							  	<label id="lc" for="BClass">Class Background</label>
 								<select id="backimg-classe-select" name="BClass">
@@ -274,9 +274,56 @@
 								  <option value="36">Yes</option>
 								  <option value="36.2">No</option>
 								</select>
+								
+								 	<label id="sSt" for="sStyle">Skills Style</label>
+								<select id="skill-style-select" name="sStyle">
+								  <option value=""disabled selected>Select the skill display style</option>
+								  <option value="26">2 skills with name(Default)</option>
+								  <option value="27">Only skill 1 with name</option>
+								  <option value="28">Only skill 2 with name</option>
+								  <option value="26.1">Only skill 1 name</option>
+								  <option value="27.1">Only skill 2 name</option>
+								  <option value="28.1">Only skill names</option>
+								  <option value="26.2">Only skill 1 description</option>
+								  <option value="27.2">Only skill 2 description</option>
+								  <option value="28.2">Only descriptions</option>
+								</select>
+								<br>
+
+								<input class="input-text" name="a1" id="atributos-carta-input" style="vertical-align: 1px;" placeholder="Name Skill 1" maxlength="44"></textarea>
+
+								<textarea class="input-text" name="d1" id="descricao-carta-input" style="vertical-align: 7px;" placeholder="Description Skill 1" maxlength="141"></textarea>
+
+								<input class="input-text" name="a2" id="atributos-carta-input2" style="vertical-align: -2px;"placeholder="Name Skill 2" maxlength="44"></textarea>
+	
+								<textarea class="input-text" name="d2" id="descricao-carta-input2" style="vertical-align: 7px;" placeholder="Description Skill 2" maxlength="141"></textarea>
+								<br>
+
+								<label id="l" for="sBack">Skills Background</label>
+								<select id="skill-backimg-select" name="sBack">
+								  <option value=""disabled selected>Select the skill background image</option>
+								  <option value="29">Upload from computer</option>								
+								  <option value="30">Link</option>								
+								  <option value="31">Color</option>
+								  <option value="02">No image</option>
+								</select>
+								<input type="text" class="input-text-card" name="url" id="skill-backimg-url-input" style="display: none;" placeholder=" Image in URL">
+								  <input type="color" class="input-text-color-7" id="cor-skill-backimg-input" hidden="false" placeholder="Cor de Fundo">
+								  <button id="upload-skill-backimg-button" class="upload-skill-backimg-button">
+                                    <span class="material-icons">file_download</span>
+                                </button>
+                                <input id="selecao-arquivo-skill" type='file' multiple accept="image/*" onchange="readURL6(this);" hidden/>
+								<br>
+
+								<label id="bSk" for="bSkill" hidden>Skills with border?</label>
+								<select id="skill-border-select" name="bSkill">
+								  <option value=""disabled selected>Border arround skills?</option>
+								  <option value="36.7">Yes</option>
+								<option value="36.8">No</option>
+								</select>
 
 								<label id="l" for="sStats">Stats Position</label>
-								<select id="stats-style-select7" name="sStats">
+								<select id="stats-style-select" name="sStats">
 								  <option value=""disabled selected>Select a style for the stats</option>
 								  <option value="19">Position 1(Default)</option>
 								  <option value="20">Position 2</option>
@@ -285,17 +332,11 @@
 								</select>
 								<br>
 
-								<input type="number" class="input-text" name="at" id="atk-value-input" placeholder="Attack Value" maxlength="6" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">  
+								<input type="number" class="input-text" name="at" id="atk-value-input" placeholder="Attack Value" maxlength="5" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">  
 
-								<input type="number" class="input-text" name="de" id="def-value-input" placeholder="Defense Value" maxlength="6" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">  
+								<input type="number" class="input-text" name="de" id="def-value-input" placeholder="Defense Value" maxlength="5" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">  
 								<br>
 
-								<label id="bSt" for="bstats" hidden>Stats with border?</label>
-								<select id="stats-border-select" name="bstats">
-								  <option value=""disabled selected>Border arround stats?</option>
-								  <option value="36.9">Yes</option>
-								<option value="36.10">No</option>
-								</select>
 							</td>
   
 							</table>
@@ -311,17 +352,8 @@
 						<article>
 							<table>
 								<td id="td-back">
-
-								<label id="lSBack" for="sBack">Card Back Style</label>
-								<select id="back-style-select" name="sBack">
-								  <option value=""disabled selected>Select a style for the card back</option>
-								  <option value="51">Style 1(Default)</option>
-								  <option value="52">Style 2</option>
-								  <option value="53">Style 3</option>
-								</select>
-								<br>
-
-							  <label id="lBack" hidden for="bImage">Card Back Image</label>
+									
+							  <label id="lBack" for="bImage">Card Back Image</label>
 							  <select id="img-backcarta-select" name="bImage" >
 								<option value=""disabled selected>Select the card back image</option>
 								<option value="1.1"> Upload from computer</option>
@@ -395,6 +427,23 @@
 						<div class="rodape-carta">
 							<div class="config-descricao-carta" id="config-desc">
 
+								<div id="skillI">
+								<img id="skill-img" src="data:image/jpeg;base64,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" alt="">
+							</div> 
+								<div class="atributos-carta" id="atributos-carta">
+									Skill 1 Name
+								</div>
+								<div class="descricao-carta" id="descricao-carta" >
+									Skill Description
+								</div>
+								<div class="atributos-carta" id="atributos-carta2">
+									Skill 2 Name
+								</div>
+								<div class="descricao-carta2" id="descricao-carta2">
+									Skill Description
+								</div>
+							</div>
+
                             <div id = "status" class="config-status">
                                 <div class="stat-atk" id="atk">ATK/ </div>
 								<div class="v-atk" id="atk-value">?</div>
@@ -434,6 +483,9 @@
 				<button id="button-03">Download Card Front</button>
 				<button id="button-031">Download Card Back</button>
 			</div>
+			<p name="msg-01" style="display: none;">Card saved, check out your profile</p>
+			<p name="msg-err-login" style="display: none;">You need to login to save a card!</p>
+			<p name="msg-err-name" style="display: none;">Cannot save card without a name!</p>
 			
 </div>
 
@@ -444,10 +496,117 @@
 <script src="../../cards/config-cards/javascript/script-card7.js"></script>
 
 
+
+
 <footer><!--rodapé-->
 	<p id="license">
 		© 2021 Make Card Games. All Rights Reserved.
 	</p>
 </footer><!--fim do rodapé-->
 </body>
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+		<script type="module" src="https://www.gstatic.com/firebasejs/9.0.0/firebase-storage.js"></script>
+		<script type="module">
+		
+			import { initializeApp, getApp } from 'https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js';
+			import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js';
+			import { getFirestore, collection, doc, setDoc, getDoc, updateDoc, arrayUnion, getDocs, serverTimestamp } from 'https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js';
+			import { getStorage, ref, uploadBytes, getDownloadURL, getMetadata } from 'https://www.gstatic.com/firebasejs/9.13.0/firebase-storage.js';
+			const firebaseApp = initializeApp({
+			apiKey: "AIzaSyAR61dkpsiGFCQRzCQ4nkAbU0plC-kYslY",
+			authDomain: "make-cardgame.firebaseapp.com",
+			projectId: "make-cardgame",
+			storageBucket: "make-cardgame.appspot.com",
+			messagingSenderId: "1016341861949",
+			appId: "1:1016341861949:web:c95383455399adf6597c54",
+			measurementId: "G-RBP9Q9N1ES"
+			});
+
+			const db = getFirestore(firebaseApp);
+
+			const auth = getAuth(firebaseApp);
+
+			const bttn = document.getElementById('button');
+
+			const user = auth.currentUser;
+
+			const storage = getStorage(); 
+
+
+			bttn.addEventListener('click', function () {
+			
+				onAuthStateChanged(auth, (user) => {
+			if (user) {
+
+				const cardName= document.getElementById("nome-carta-input").value;
+				const user = auth.currentUser;
+				const uid = user.uid;
+				const storageRef = ref(storage, 'card-pic/'+`${user.uid}` + `/${cardName}`);
+
+				if(cardName !== ''){
+				domtoimage.toBlob(document.getElementById("card"))
+					.then(function(blob){
+
+				uploadBytes(storageRef, blob).then((snapshot) => {
+				console.log('Uploaded a blob or file!');
+
+				document.querySelector('[name= msg-err-login]').style='display: none';
+				document.querySelector('[name= msg-err-name]').style='display: none';
+				document.querySelector('[name= msg-01]').style='display: block;'+
+					'text-align: center;'+
+					'width: 263px;'+
+					'position: absolute;'+
+					'margin: -831px 0px 0px 877px;'+
+					'color: green;';
+                })
+			})
+				}else{
+					document.querySelector('[name= msg-err-login]').style='display: none';
+					document.querySelector('[name= msg-err-name]').style='display: block;'+
+					'text-align: center;'+
+					'width: 263px;'+
+					'position: absolute;'+
+					'margin: -831px 0px 0px 877px;'+
+					'color: red;';
+					console.log('name required');
+				}
+		}else{
+			document.querySelector('[name= msg-err-name]').style='display: none';
+			document.querySelector('[name= msg-err-login]').style='display: block;'+
+					'text-align: center;'+
+					'width: 263px;'+
+					'position: absolute;'+
+					'margin: -831px 0px 0px 877px;'+
+					'color: red;';
+			console.log('login required!!!');
+			}
+		})
+	}) 
+
+	onAuthStateChanged(auth, (user) => {
+			if (user) {
+                    document.getElementById("prof").style =
+                        "display: block;"+
+						'color: white;'+
+						'font-size: 14px;'+
+						'text-decoration: none;'+
+						'background-color: #2b2b2b;'+
+						'padding: 2px;'+
+						'border-radius: 5px;'+
+						'margin: -31px 0px 0px 206px;'+
+						'width: 110px;'+
+						'height: 40px;';
+                    document.getElementById("menu-more").style =
+                         "margin: -43px 0 0 330px;";
+                        
+                } else {
+                    document.getElementById("prof").style =
+                        "display: none;";
+                    document.getElementById("menu-more").style =
+                         "margin: -33px 0 0 199px;";
+                }
+			})
+			</script>
 </html>

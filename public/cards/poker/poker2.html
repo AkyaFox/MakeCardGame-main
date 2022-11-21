@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+	<html lang="en">
+
+		<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>MakeCardGames - Card Creation</title>
+		
+		<!-- Link das fontes ultilizadas de um servidor google -->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="../config-cards/style-poker2.css"/>
+		<link rel="stylesheet" href="../config-cards/config-card-general.css"/>
+		<link rel="stylesheet" href="../config-cards/poker-general.css"/>
+		</head>
+<body>
+
+<!-- Inicio da configuração do menu -->
+
+<header>
+	
+
+	<div class= "center">
+		<div class="logo">
+			<h3> MCG </h3>
+		</div>
+		
+	<div class= "center">
+				<div class="name">
+			<h2>Make Card Game - Creation</h2>
+		</div> <!-- name -->
+		
+		</div> <!-- login -->
+	</div> <!-- center -->
+			
+</header>
+	
+	<div class= "left">	
+		<div class="menu">
+			<a href="../../home.html">
+			<span class="material-icons" id= "btnIcon">account_circle</span>Home
+			</a>
+			
+			<a href="../../game.html">
+			<span class="material-icons" id= "btnIcon">sports_esports</span> Games
+			</a>
+			
+			<a id="prof" href="../../profile.html">
+			<span class="material-icons" id= "btnIcon">person</span> Account
+			</a>
+						
+			<ul id="menu-more" class="menu-more">
+			<li>
+			<a href="#"> <span class="material-icons">expand_more</span> More </a>
+				<ul>
+					<li><a href="../../faq.html"><span class="material-icons">quiz</span> FAQ</a></li>
+					<li><a href="../../help.html"><span class="material-icons">help</span> Help</a></li>
+				</ul>	
+			 </li>
+			</ul>
+			
+		</div> <!-- menu -->
+	</div> <!-- left -->
+<!-- Fim da configuração do menu -->
+			
+		
+	<div class="arruma">
+			<div class="title">
+				<h2>Card Creation Menu</h2>
+			</div><!--tittle-->
+
+			<div class="appe">
+				<h1>Card Appearence</h1>
+			</div><!--appe-->
+
+			<!--Início da configuração das abas-->
+			<nav class="nav_tabs">
+				<!--Aba 1(Card body)-->
+				<ul>
+					<li>
+						<input type="radio" name="tabs" class="nd_tabs" id="t1" checked>
+						<label for="t1" id="la">Card body - Front</label>
+					<div class="content">
+						<article>
+							<table>
+								<td>
+							  <label for="name">Card Name</label>
+							  <input type="text" class="input-text" name="name" id="nome-carta-input" placeholder="Input the Card Name" maxlength="31"> 
+							  <br>
+
+							  	<label id="lNaipe" for="sNaipe">Deck suit Style</label>
+								<select id="borda-style-select" name="sName">
+								  <option value=""disabled selected>Select a style for the name image</option>
+								  <option value="44.1">Hearts</option>
+								  <option value="45.1">Clubs</option>
+								  <option value="46.1">Diamonds</option>
+								  <option value="47.1">Spades</option>
+								  <option value="48.1">Other(Select your own image)</option>
+								</select>
+
+							  <label id="lIc" for="Eicon" hidden>Card Deck suit</label>
+								<select id="iconimg-carta-select" name="Eicon">
+								  <option value=""disabled selected>Select a image for the card Deck suit</option>
+								  <option value="12">Upload from computer</option>
+								  <option value="13">Link</option>
+								</select>
+                                <input type="text" class="input-text-card" name="url" id="icon-url-carta-input" style="display: none;" placeholder=" Image in URL">
+								  <input type="color" class="input-text-color-4" id="cor-icone-carta-input" hidden="false" placeholder="Cor de Fundo">
+								  <button id="upload-iconimg-button" class="upload-iconimg-button">
+                                    <span class="material-icons">file_download</span>
+                                </button>
+                                <input id="selecao-arquivo-icon" type='file' multiple accept="image/*" onchange="readURLNaipe(this);" hidden/>
+								<br>
+
+								<label id="lImg" for="mImage" hidden>Card main Image</label>
+							  <select id="img-carta-select" name="mImage" >
+								<option value=""disabled selected>Select the card main image</option>
+								<option value="1"> Upload from computer</option>
+								<option value="2">Link</option>
+								<option value="3">Color</option>
+                                </select>
+                                <input type="color" class="input-text-color-1" id="cor-imagem-carta-input" hidden="false" placeholder="Cor de Fundo">
+							  <input type="text" class="input-text" name="url" id="imagem-url-carta-input" placeholder=" Image in URL">
+							  <input id="selecao-arquivo-img" style="display: none;" type='file' multiple accept="image/*" onchange="readURL2(this);"/>
+							  
+							  <button id="upload-img">
+								<span class="material-icons">file_download</span>
+							  </button>
+							  <br>
+
+							  <label id="bImg" for="bImage">Image with Border?</label>
+								<select id="image-border-select" name="bImage">
+								  <option value=""disabled selected>Border arround card main image?</option>
+								  <option value="36.3">Yes</option>
+								  <option value="36.4">No</option>
+								</select>
+								<br>
+
+						   <label class="border">Font Color</label>
+							  <input type="color" class="input-text-color" id="cor-texto-carta-input" placeholder="Cor do Texto">
+							  <br>
+							  
+							  <label class="font">Border Color</label>
+							  <input type="color" class="input-text-color-2" id="cor-carta-input" placeholder="Cor da Carta">
+						 <br>
+							  <label for="back">Background Image</label>
+							  <select id="backimg-carta-select" name="back" >
+								<option value=""disabled selected>Select a image or color for card background</option>
+								<option value="4"> Upload from computer</option>
+								<option value="5">Link</option>
+								<option value="7" id="texture-card-input">Color</option>
+							  </select>
+							  <input type="color" class="input-text-color-3" id="cor-fundo-carta-input" hidden="false" placeholder="Cor de Fundo">
+							  <button id="upload-backimage-button">
+								  <span class="material-icons">file_download</span>
+							  </button>
+							  
+							  <input id="selecao-arquivo" style="display: none" type='file' multiple accept="image/*" onchange="readURL(this);" />
+							  <input type="text" class="input-text" name="url" id="background-url-carta-input" placeholder=" Image in URL"> 
+							  <br>
+							  
+							  </td>
+						  </table>
+						</article>
+					</div>
+					</li><!--fim da aba 1-->
+
+					<!--aba 2(Card atributes)-->
+					<li>
+						<input type="radio" name="tabs" class="nd_tabs" id="t2">
+						<label for="t2" id="la">Card Atributes</label>
+						<div class="content">
+						<article>
+							<table>
+
+						<td id="td">
+                                	<label id="l" for="sNumber">Numbering Style</label>
+								<select id="number-style-select" name="sNumber">
+								  <option value=""disabled selected>Select a style for the numbering</option>
+								  <option value="19.1">Style 1(1 to 10)</option>
+								  <option value="20.1">Style 2(A, King"K", Queen"Q", Joker"J")</option>
+								</select>
+								<br>
+
+								<input type="number" class="input-text" name="at" id="naipe-value-input" placeholder="Naipe Value" min="2" max="10" maxlength="2" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">   
+
+                                <label for="naipeLetter" hidden>Deck suit Letter</label>
+							  <input type="text" class="input-text" name="naipeLetter" id="naipe-letter-input" placeholder="Input the Card Letter" maxlength="1"> 
+  
+							</table>
+						</article>
+					</div>
+					</li><!--Fim da aba 2-->
+
+				<!--Aba 3(Card body - Back)-->
+					<li>
+						<input type="radio" name="tabs" class="nd_tabs" id="t3">
+						<label for="t3" id="la3">Card Body - Back</label>
+					<div class="content">
+						<article>
+							<table>
+								<td id="td-back">
+
+							  <label id="lBack" for="bImage">Card Back Image</label>
+							  <select id="img-backcarta-select" name="bImage" >
+								<option value=""disabled selected>Select the card back image</option>
+								<option value="1.1"> Upload from computer</option>
+								<option value="2.1">Link</option>
+								<option value="3.1">Color</option>
+                                </select>
+                                <input type="color" class="input-text-color-8" id="cor-imagem-backcarta-input" hidden="false" placeholder="Cor de Fundo">
+							  <input type="text" class="input-text" name="url" id="imagem-url-backcarta-input" placeholder=" Image in URL">
+							  <input id="selecao-arquivo-img-backcarta" style="display: none;" multiple accept="image/*" type='file' onchange="readURL7(this);"/>
+							  
+							  <button id="upload-backcarta-img">
+								<span class="material-icons">file_download</span>
+							  </button>
+							  <br>
+
+							</td>
+							</table>
+						</article>
+					</div>
+					</li><!--Fim da aba 2-->
+				</ul>
+			</nav>
+				<!--Fim da configuração das abas-->
+
+			<select id="bar" name="baralho">
+				<option value="" disabled selected>Select what you want to do with the card</option>
+				<option value="24" id="24">Save Card</option>
+				<option value="25">Download Card</option>
+			</select>
+			
+
+			<div class="config-carta-front" id="config-card-front">
+				<div class="center-div carta-container">
+					<div class="arumation">
+					<div class="carta textura-cor" id="carta">
+						<div class="carta-completa" id="card" style="background-color: white;">
+
+                            <p id="num1">6</p>
+							  <div id="forma-icon1">&clubs;</div>
+
+                            <p id="num3">6</p>
+                            <div id="forma-icon3">&clubs;</div>
+
+
+							<div id="fImg1" hidden>
+								<img id="icon-img1" src="data:image/png;base64,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" alt="">
+							</div>
+
+							<div id="fImg3" hidden>
+								<img id="icon-img3" src="data:image/png;base64,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" alt="">
+							</div>
+		
+						
+						<input type="color" class="input-text" id="cor-fundo-carta-input" hidden="true" placeholder="Cor de Fundo">
+						<div class="gradiente-container" hidden="true" id="gradiente-container">
+							<input type="color" class="gradient-picker" id="gradient-picker"/><input type="color" class="gradient-picker" id="gradient-picker"/><button class="add gradient-button" href="#">Add Color</button>  
+							<button id="reset-gradient-button" class="gradient-button" style="display: none;">Reset</button>
+							<button id="gradient-button" class="gradient-button">Gradient This</button>
+						</div>
+						
+						<div class="imagem-carta" id="imagem-carta-container">
+							<img id="img-carta" hidden src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC">
+
+						<div id="select-number-card">
+							<div id="spot1">&clubs;</div>
+							<div id="spot2">&clubs;</div>
+							<div id="spot3">&clubs;</div>
+							<div id="spot4">&clubs;</div>
+							<div id="spot5">&clubs;</div>
+							<div id="spot6">&clubs;</div>
+							<div id="spot7" hidden>&clubs;</div>
+							<div id="spot8" hidden>&clubs;</div>
+							<div id="spot9" hidden>&clubs;</div>
+							<div id="spot10" hidden>&clubs;</div>
+						</div>
+						</div>
+						<img id="background-carta" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC"> <!---->
+						</div>
+					</div>
+				</div>
+					</div>
+				</div>
+
+				<div class="config-carta-back" id="config-card-back" hidden>
+				<div class="center-div carta-container">
+					<div class="arumation">
+					<div class="carta textura-cor" id="carta-back">
+						<div class="carta-completa-back" id="card-back">
+
+						<input type="color" class="input-text" id="cor-fundo-carta-input" hidden="true" placeholder="Cor de Fundo">
+						<div class="gradiente-container" hidden="true" id="gradiente-container">
+							<input type="color" class="gradient-picker" id="gradient-picker"/><input type="color" class="gradient-picker" id="gradient-picker"/><button class="add gradient-button" href="#">Add Color</button>  
+							<button id="reset-gradient-button" class="gradient-button" style="display: none;">Reset</button>
+							<button id="gradient-button" class="gradient-button">Gradient This</button>
+						</div>
+					
+						<img id="backcarta-img" src="https://thumbs.dreamstime.com/b/texture-poker-icons-black-background-playing-cards-classic-games-140410304.jpg"  alt="">
+				</div>
+					</div>
+				</div>
+				</div>
+				</div>
+
+				<p id="mat-01">Card Saved!</p>
+				<button type="submit" id="button">Save Card</button>
+				<button id="button-03">Download Card Front</button>
+				<button id="button-031">Download Card Back</button>
+			</div>
+			<p name="msg-01" style="display: none;">Card saved, check out your profile</p>
+			<p name="msg-err-login" style="display: none;">You need to login to save a card!</p>
+			<p name="msg-err-name" style="display: none;">Cannot save card without a name!</p>
+			
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js"></script>
+<script src="../../cards/config-cards/javascript/script-card-general.js"></script>
+<script src="../../cards/config-cards/javascript/script-poker1.js"></script>
+
+
+<footer><!--rodapé-->
+	<p id="license">
+		© 2021 Make Card Games. All Rights Reserved.
+	</p>
+</footer><!--fim do rodapé-->
+</body>
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+		<script type="module" src="https://www.gstatic.com/firebasejs/9.0.0/firebase-storage.js"></script>
+		<script type="module">
+		
+			import { initializeApp, getApp } from 'https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js';
+			import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js';
+			import { getFirestore, collection, doc, setDoc, getDoc, updateDoc, arrayUnion, getDocs, serverTimestamp } from 'https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js';
+			import { getStorage, ref, uploadBytes, getDownloadURL, getMetadata } from 'https://www.gstatic.com/firebasejs/9.13.0/firebase-storage.js';
+			const firebaseApp = initializeApp({
+			apiKey: "AIzaSyAR61dkpsiGFCQRzCQ4nkAbU0plC-kYslY",
+			authDomain: "make-cardgame.firebaseapp.com",
+			projectId: "make-cardgame",
+			storageBucket: "make-cardgame.appspot.com",
+			messagingSenderId: "1016341861949",
+			appId: "1:1016341861949:web:c95383455399adf6597c54",
+			measurementId: "G-RBP9Q9N1ES"
+			});
+
+			const db = getFirestore(firebaseApp);
+
+			const auth = getAuth(firebaseApp);
+
+			const bttn = document.getElementById('button');
+
+			const user = auth.currentUser;
+
+			const storage = getStorage(); 
+
+
+			bttn.addEventListener('click', function () {
+			
+				onAuthStateChanged(auth, (user) => {
+			if (user) {
+
+				const cardName= document.getElementById("nome-carta-input").value;
+				const user = auth.currentUser;
+				const uid = user.uid;
+				const storageRef = ref(storage, 'card-pic/'+`${user.uid}` + `/${cardName}`);
+
+				if(cardName !== ''){
+				domtoimage.toBlob(document.getElementById("card"))
+					.then(function(blob){
+
+				uploadBytes(storageRef, blob).then((snapshot) => {
+				console.log('Uploaded a blob or file!');
+
+				document.querySelector('[name= msg-err-login]').style='display: none';
+				document.querySelector('[name= msg-err-name]').style='display: none';
+				document.querySelector('[name= msg-01]').style='display: block;'+
+					'text-align: center;'+
+					'width: 263px;'+
+					'position: absolute;'+
+					'margin: -831px 0px 0px 877px;'+
+					'color: green;';
+                })
+			})
+				}else{
+					document.querySelector('[name= msg-err-login]').style='display: none';
+					document.querySelector('[name= msg-err-name]').style='display: block;'+
+					'text-align: center;'+
+					'width: 263px;'+
+					'position: absolute;'+
+					'margin: -831px 0px 0px 877px;'+
+					'color: red;';
+					console.log('name required');
+				}
+		}else{
+			document.querySelector('[name= msg-err-name]').style='display: none';
+			document.querySelector('[name= msg-err-login]').style='display: block;'+
+					'text-align: center;'+
+					'width: 263px;'+
+					'position: absolute;'+
+					'margin: -831px 0px 0px 877px;'+
+					'color: red;';
+			console.log('login required!!!');
+			}
+		})
+	}) 
+
+	onAuthStateChanged(auth, (user) => {
+			if (user) {
+                    document.getElementById("prof").style =
+                        "display: block;"+
+						'color: white;'+
+						'font-size: 14px;'+
+						'text-decoration: none;'+
+						'background-color: #2b2b2b;'+
+						'padding: 2px;'+
+						'border-radius: 5px;'+
+						'margin: -31px 0px 0px 206px;'+
+						'width: 110px;'+
+						'height: 40px;';
+                    document.getElementById("menu-more").style =
+                         "margin: -43px 0 0 330px;";
+                        
+                } else {
+                    document.getElementById("prof").style =
+                        "display: none;";
+                    document.getElementById("menu-more").style =
+                         "margin: -33px 0 0 199px;";
+                }
+			})
+			</script>
+</html>

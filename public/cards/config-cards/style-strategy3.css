@@ -1,0 +1,78 @@
+
+#backimg-carta-select {
+    margin-left: 63px !important;
+}
+
+#nome-carta-input {
+    margin-top: 10px !important;
+}
+
+#td-back{
+    width: 100% !important;
+}
+
+#lBack {
+    display: block;
+    margin-top: 21px !important;
+}
+
+#img-backcarta-select {
+  margin: -34px -4px 0 152px !important;
+  width: 77.2% !important;
+  display: block !important;
+}
+
+#imagem-url-backcarta-input,
+.input-text-color-8 {
+  width: 77.2% !important;
+}
+
+/* card config */
+
+.arumation {
+    background-size: cover;
+    width: 350px;
+    height: 550px;
+    border-radius: 3%;
+}
+
+.carta {
+    margin: 283px -145px 0 130px;
+    width: 350px;
+    height: 550px;
+    border-radius: 3%;
+    z-index: 1;
+    float: right;
+}
+
+#background-carta{
+    position: absolute;
+    margin: -302px 0 0 -2px;
+    background-size: cover;
+    z-index: -2;
+    width: 355px;
+    height: 550px;
+    border-radius: 3%;
+    border: 2px solid black;
+}
+
+.topo-carta {
+    height: 10%;
+}
+
+.imagem-carta {
+    border: 2px solid black;
+    height: 80%;
+    width: 98.9%;
+    margin: 29px 0 0 2px;
+}
+
+.imagem-carta img {
+    height: 100%;
+    width: 100%;
+}
+
+.rodape-carta {
+    height: 45%;
+    padding-top: 3%;
+}

@@ -1,0 +1,129 @@
+#borda-style-select {
+  margin-bottom: -20px;
+}
+
+#lImg {
+  margin-top: 37px !important;
+}
+
+.input-text-color {
+     margin-top: 1px !important;
+}
+
+.input-text-color-1 {
+    margin-top: 20px !important;
+    margin-bottom: 10px !important;
+}
+
+#img-carta-select {
+     margin-bottom: -10px !important;
+}
+
+#upload-img{
+    margin-top: -37px !important;
+}
+
+#imagem-url-carta-input{
+    margin-top: 20px !important;
+    margin-bottom: -10px !important;
+}
+
+#nome-carta-input {
+  margin-top: 10px !important;
+}
+
+#iconimg-carta-select, #icon-border-select{
+    width: 53% !important;
+}
+
+#upload-iconimg-button{
+    margin-top: -47px !important;
+}
+
+#lIc {
+    margin-top: 23px !important;
+}
+
+#icon-url-carta-input {
+    width: 53.2% !important;
+    margin-top: 10px !important;
+    margin-bottom: 0px !important;
+}
+
+/* card config */
+
+.arumation {
+    background-size: cover;
+    width: 350px;
+    height: 550px;
+    border-radius: 3%;
+}
+
+.carta {
+    margin: 283px -145px 0 130px;
+    width: 350px;
+    height: 550px;
+    border-radius: 3%;
+    z-index: 1;
+    float: right;
+}
+
+#background-carta{
+    position: absolute;
+    margin: -236px 0px 0 -2px;
+    background-size: cover;
+    z-index: -2;
+    width: 355px;
+    height: 550px;
+    border-radius: 3%;
+    border: 2px solid black;
+}
+
+.nome-carta {
+    width: 74%;
+    height: 10%;
+    position: absolute;
+    text-align: center;
+    font-size: large;
+    color: floralwhite;
+    font-weight: bolder;
+    padding-top: 17px;
+    border-radius: 8px;
+    word-wrap: break-word;
+    margin-left: 11px;
+    z-index: 1;
+}
+
+.topo-carta {
+    height: 10%;
+}
+
+.imagem-carta {
+    height: 26%;
+    width: 40%;
+    margin: -474.5px 0 0 13px;
+}
+
+.imagem-carta img {
+    height: 100%;
+    width: 100%;
+}
+
+.rodape-carta {
+    height: 45%;
+    padding-top: 3%;
+}
+
+#select-number-card{
+    margin: 91px 0 0 -69px;
+}
+
+#num1 {
+    font-size: 315px;
+    margin: 77px 0 0 82px;
+}
+
+#spot1{
+    margin: -330px 0 0 75px;
+    font-size: 210px;
+}

@@ -145,7 +145,7 @@ p {
     display: none;
 }
 
-#button {
+#button{
     position: absolute;
     margin: 0px 0 740px 860px;
     display: none;
@@ -177,7 +177,7 @@ p {
 }
 
 #button-031{
-    margin: 0px 0 740px 830px;
+    margin: 0px 0 808px 830px;
     display: none;
 }
 
@@ -305,11 +305,17 @@ select {
 #card, #card-back{
     height: 550px;
     border-radius: 3%;
-    margin: 0;
 }
 
-#card-back{
-    margin: 0 0 0 5px;
+#backcarta-img {
+    position: absolute;
+    margin: -2px 0 0 -2px;
+    background-size: cover;
+    z-index: -2;
+    width: 355px;
+    height: 550px;
+    border-radius: 3%;
+    border: 2px solid black;
 }
 
 .nav_tabs {
@@ -471,9 +477,9 @@ select {
 }
 
 #img-backcarta-select{
-    display: none;
-    margin: -31px -4px 0 152px;
+    margin: -35px -4px 0 152px;
     width: 57.2%;
+    display: block;
 }
 
 #td{
@@ -664,7 +670,8 @@ select {
 }
 
 #lBack{
-    margin-top: 21px;
+    margin-top: 23px;
+    display: block;
 }
 
 #an {

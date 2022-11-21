@@ -13,7 +13,6 @@ $(document).ready(function () {
     });
 
     $("#card").css("border", "2px solid #000"); /* card */
-    $("#imagem-carta-container").css("border", "2px solid #000"); /* img-card */
     $("#custo-mana-carta").css("background-color", "#000"); /* mana */
     $("#cor-texto-carta-input").val("#ffffff"); /* card-collor */
 });
@@ -98,6 +97,157 @@ $("#atributos-carta-input").on("input", function () {
 $("#atributos-carta-input2").on("input", function () {
     $("#atributos-carta2").html($(this).val());
 });
+$("#naipe-value-input").on("input", function () {
+    $("#num1").html($(this).val());
+    $("#num2").html($(this).val());
+    $("#num3").html($(this).val());
+    $("#num4").html($(this).val());
+
+    var x = $(this).val();
+
+    if(x == '10'){
+        $("#num1").css("margin-left", "-3px")
+        $("#num2").css("margin-left", "280px")
+        $("#num3").css("margin-right", "-2px")
+        $("#num4").css("margin-right", "280px")
+
+        $("#fImg1").css("margin", "-16px 0 0 6px")
+        $("#fImg2").css("margin", "-16px 0 0 293.7px")
+        $("#fImg3").css("margin", "-130px 0 0 293.7px")
+        $("#fImg4").css("margin", "-130px 0 0 6px")
+
+    }else if(x !== '10'){
+        $("#num1").css("margin-left", "12px")
+        $("#num2").css("margin-left", "300px")
+        $("#num3").css("margin-right", "15px")
+        $("#num4").css("margin-right", "303px")
+
+        $("#fImg1").css("margin", "-16px 0 0 6px")
+        $("#fImg2").css("margin", "-16px 0 0 293.7px")
+        $("#fImg3").css("margin", "-130px 0 0 293.7px")
+        $("#fImg4").css("margin", "-130px 0 0 6px")
+
+    }
+
+});
+
+$("#naipe-letter-input").on("input", function () {
+    $("#num1").html($(this).val());
+    $("#num2").html($(this).val());
+    $("#num3").html($(this).val());
+    $("#num4").html($(this).val());
+
+    var x = $(this).val();
+
+    if(x == 'A' || x == 'a' || x == 'B' || x == 'b' || x == 'C' || x == 'c' || x == 'D' || x == 'd' || x == 'E' 
+    || x == 'e' || x == 'F' || x == 'f' || x == 'G' || x == 'H' || x == 'h' || x == 'I' || x == 'i' ||x == 'K' 
+    || x == 'k' || x == 'L' || x == 'l' || x == 'M' || x == 'm' || x == 'N' || x == 'n' || x == 'O' || x == 'O' 
+    ||x == 'o' ||x == 'P' || x == 'p' || x == 'R' || x == 'r' || x == 'S' || x == 's' || x == 'T' || x == 't' 
+    ||x == 'U' || x == 'u' || x == 'V' || x == 'v' || x == 'W' || x == 'w' || x == 'X' || x == 'x' || x == 'Y' 
+    || x == 'y' ||x == 'Z' ||x == 'z'){
+        $("#fImg1").css("margin-top", "-475px")
+        $("#fImg2").css("margin-top", "-475px")
+        $("#fImg3").css("margin-top", "-130px")
+        $("#fImg4").css("margin-top", "-130px")
+    }
+
+    if(x == 'J' || x == 'j'){
+        $("#num1").css("margin-left", "25px")
+        $("#num2").css("margin-left", "313.7px")
+        $("#num3").css("margin-right", "30px")
+        $("#num4").css("margin-right", "317px")
+        
+        $("#fImg1").css("margin-top", "-468px")
+        $("#fImg2").css("margin-top", "-468px")
+        $("#fImg3").css("margin-top", "-137px")
+        $("#fImg4").css("margin-top", "-137px")
+
+
+    }else if(x == 'Q' || x== 'q'){
+        $("#num1").css("margin-left", "4px")
+        $("#num2").css("margin-left", "295.7px")
+        $("#num3").css("margin-right", "4px")
+        $("#num4").css("margin-right", "297px")
+
+        $("#fImg1").css("margin-top", "-468px")
+        $("#fImg2").css("margin-top", "-468px")
+        $("#fImg3").css("margin-top", "-137px")
+        $("#fImg4").css("margin-top", "-137px")
+
+    }else if(x == 'A' || x == 'a' || x == 'B' || x == 'b' || x == 'C' || x == 'c' || x == 'D' || x == 'd' || x == 'E' 
+    || x == 'e' || x == 'F' || x == 'G' || x == 'h' || x == 'L' || x == 'N'  || x == 'o'
+    || x == 'n' || x == 'P' || x == 'p' || x == 'R' || x == 'u' || x == 'V' || x == 'Z'){
+        $("#num1").css("margin-left", "11px")
+        $("#num2").css("margin-left", "297.7px")
+        $("#num3").css("margin-right", "15px")
+        $("#num4").css("margin-right", "302px")
+
+    }else if(x == 'K' || x == 'k' || x == 'X' || x == 'Y'){
+        $("#num1").css("margin-left", "11px")
+        $("#num2").css("margin-left", "296.7px")
+        $("#num3").css("margin-right", "12px")
+        $("#num4").css("margin-right", "298px")
+
+    }else if(x == 'I' || x == 'i' || x == 'l' || x == 'r'){
+        $("#num1").css("margin-left", "22px")
+        $("#num2").css("margin-left", "308.7px")
+        $("#num3").css("margin-right", "24px")
+        $("#num4").css("margin-right", "312px")
+
+    }else if(x == 'M' || x == 'm' || x == 'W'){
+        $("#num1").css("margin-left", "4px")
+        $("#num2").css("margin-left", "290px")
+        $("#num3").css("margin-right", "7px")
+        $("#num4").css("margin-right", "293px")
+
+    }else if(x == 'w'  || x == 'H' || x == 'O' || x == 'U'){
+        $("#num1").css("margin-left", "7px")
+        $("#num2").css("margin-left", "294px")
+        $("#num3").css("margin-right", "10.1px")
+        $("#num4").css("margin-right", "297.1px")
+
+    }else if(x == 'S'  || x == 's'){
+        $("#num1").css("margin-left", "14px")
+        $("#num2").css("margin-left", "300px")
+        $("#num3").css("margin-right", "17px")
+        $("#num4").css("margin-right", "306px")
+
+    }else if(x == 'T'){
+        $("#num1").css("margin-left", "13px")
+        $("#num2").css("margin-left", "300px")
+        $("#num3").css("margin-right", "18px")
+        $("#num4").css("margin-right", "304.1px")
+
+    }else if(x == 't'){
+        $("#num1").css("margin-left", "13px")
+        $("#num2").css("margin-left", "305px")
+        $("#num3").css("margin-right", "20px")
+        $("#num4").css("margin-right", "308px")
+
+    }else if(x == 'f'){
+        $("#num1").css("margin-left", "20px")
+        $("#num2").css("margin-left", "307px")
+        $("#num3").css("margin-right", "26px")
+        $("#num4").css("margin-right", "313px")
+
+    }else if(x == 'g'){
+        $("#num1").css("margin-left", "11px")
+        $("#num2").css("margin-left", "297.7px")
+        $("#num3").css("margin-right", "15px")
+        $("#num4").css("margin-right", "302px")
+
+        $("#fImg1").css("margin-top", "-5px")
+        $("#fImg2").css("margin-top", "-5px")
+        $("#fImg3").css("margin-top", "-141px")
+        $("#fImg4").css("margin-top", "-141px")
+
+    }else if(x == 'v' || x == 'x'){
+        $("#num1").css("margin-left", "14px")
+        $("#num2").css("margin-left", "302px")
+        $("#num3").css("margin-right", "19px")
+        $("#num4").css("margin-right", "307px")
+    }
+});
 
 //Imagem por Url
 $("#imagem-url-carta-input").on("input", function () {
@@ -144,6 +294,13 @@ $("#imagem-url-backcarta-input").on("input", function () {
     $("#card-back").css("background-color", "transparent");
 });
 
+$("#icon-url-carta-input").on("input", function () {
+    $("#icon-img1").attr("src", $(this).val());
+    $("#icon-img2").attr("src", $(this).val());
+    $("#icon-img3").attr("src", $(this).val());
+    $("#icon-img4").attr("src", $(this).val());
+});
+
 $("#textura-carta-input").on("change", function () {
     $("#carta").removeClass();
     $("#carta").addClass("carta " + this.value);
@@ -161,6 +318,8 @@ $("#cor-carta-input").change(function () {
     $("#card-back").css("border", "2px solid " + $(this).val());
     $("#custo-mana-carta").css("background-color", $(this).val());
     $("#forma-icon").css("border-color", $(this).val());
+    $("#name-border").css("border-color", $(this).val());
+    $("#top-name-config-img").css("border-color", $(this).val());
 });
 
 //
@@ -179,6 +338,25 @@ $("#cor-texto-carta-input").change(function () {
     $("#def").css("color", $(this).val());
     $("#atk-value").css("color", $(this).val());
     $("#def-value").css("color", $(this).val());
+    $("#num1").css("color", $(this).val());
+    $("#num2").css("color", $(this).val());
+    $("#num3").css("color", $(this).val());
+    $("#num4").css("color", $(this).val());
+    $("#forma-icon1").css("color", $(this).val());
+    $("#forma-icon2").css("color", $(this).val());
+    $("#forma-icon3").css("color", $(this).val());
+    $("#forma-icon4").css("color", $(this).val());
+    $("#spot1").css("color", $(this).val());
+    $("#spot2").css("color", $(this).val());
+    $("#spot3").css("color", $(this).val());
+    $("#spot4").css("color", $(this).val());
+    $("#spot5").css("color", $(this).val());
+    $("#spot6").css("color", $(this).val());
+    $("#spot7").css("color", $(this).val());
+    $("#spot8").css("color", $(this).val());
+    $("#spot9").css("color", $(this).val());
+    $("#spot10").css("color", $(this).val());
+
 });
 
 //imagem da carta
@@ -334,6 +512,305 @@ $("select").change(function () {
         $("#cor-imagem-backcarta-input").attr("hidden", false);
     }
 
+    // Configuração do numero do naipe
+    if (e == "19.1") {
+        document.getElementById("naipe-value-input").style.display ="block";
+        document.getElementById("naipe-letter-input").style.display ="none";
+    }
+    if (e == "20.1") {
+        document.getElementById("naipe-value-input").style.display ="none";
+        document.getElementById("naipe-letter-input").style.display ="block";
+    }
+
+    // Configuração da quantidade de naipes
+
+    $("#naipe-value-input").on("input", function () {
+        let num = $("#naipe-value-input").val();
+
+    if(num == '2' || num == '3' || num == '4' || num == '5' || num == '6'){
+        $('#select-number-card').attr('hidden', false);
+
+        $('#spot1').css('font-size', '150px');
+        $('#spot2').css('font-size', '150px');
+        $('#spot2').css('font-size', '150px');
+        $('#spot3').css('font-size', '150px');
+        $('#spot3').css('font-size', '150px');
+        $('#spot4').css('font-size', '150px');
+        $('#spot4').css('font-size', '150px');
+        $('#spot5').css('font-size', '150px');
+        $('#spot6').css('font-size', '150px');
+
+    }else if(num == '7' || num == '8'){
+        $('#select-number-card').attr('hidden', false);
+
+        $('#spot1').css('font-size', '136px');
+        $('#spot2').css('font-size', '136px');
+        $('#spot2').css('font-size', '136px');
+        $('#spot3').css('font-size', '136px');
+        $('#spot3').css('font-size', '136px');
+        $('#spot4').css('font-size', '136px');
+        $('#spot4').css('font-size', '136px');
+        $('#spot5').css('font-size', '136px');
+        $('#spot6').css('font-size', '136px');
+        $('#spot7').css('font-size', '136px');
+        $('#spot8').css('font-size', '136px');
+
+    }else if(num == '9' || num == '10'){
+        $('#select-number-card').attr('hidden', false);
+
+        $('#spot1').css('font-size', '125px');
+        $('#spot2').css('font-size', '125px');
+        $('#spot2').css('font-size', '125px');
+        $('#spot3').css('font-size', '125px');
+        $('#spot3').css('font-size', '125px');
+        $('#spot4').css('font-size', '125px');
+        $('#spot4').css('font-size', '125px');
+        $('#spot5').css('font-size', '125px');
+        $('#spot6').css('font-size', '125px');
+        $('#spot7').css('font-size', '125px');
+        $('#spot8').css('font-size', '125px');
+        $('#spot9').css('font-size', '125px');
+        $('#spot10').css('font-size', '125px');
+    }
+
+
+    if(num == '2'){
+        $('#spot1').attr('hidden', false);
+        $('#spot2').attr('hidden', false);
+
+        $('#spot1').css('margin', '-428px 0 0 124px');
+        $('#spot2').css('margin', '34px 55px 0 0');
+        $('#spot2').css('transform', 'rotate(180deg)');
+
+        $('#spot3').attr('hidden', true);
+        $('#spot4').attr('hidden', true);
+        $('#spot5').attr('hidden', true);
+        $('#spot6').attr('hidden', true);
+        $('#spot7').attr('hidden', true);
+        $('#spot8').attr('hidden', true);
+        $('#spot9').attr('hidden', true);
+        $('#spot10').attr('hidden', true);
+
+    }else if(num == '3'){
+        $('#spot1').attr('hidden', false);
+        $('#spot2').attr('hidden', false);
+        $('#spot3').attr('hidden', false);
+
+        $('#spot1').css('margin', '-453px 0 0 124px');
+        $('#spot2').css('margin', '-83px 0 0 124px');
+        $('#spot2').css('transform', 'rotate(0deg)');
+        $('#spot3').css('margin', '-40px 55px 0 0');
+        $('#spot3').css('transform', 'rotate(180deg)');
+
+        $('#spot4').attr('hidden', true);
+        $('#spot5').attr('hidden', true);
+        $('#spot6').attr('hidden', true);
+        $('#spot7').attr('hidden', true);
+        $('#spot8').attr('hidden', true);
+        $('#spot9').attr('hidden', true);
+        $('#spot10').attr('hidden', true);
+
+    }else if(num == '4'){
+        $('#spot1').attr('hidden', false);
+        $('#spot2').attr('hidden', false);
+        $('#spot3').attr('hidden', false);
+        $('#spot4').attr('hidden', false);
+
+        $('#spot1').css('margin', '-453px 0px 0px 69px');
+        $('#spot2').css('margin', '-204px 0px 0px 181px');
+        $('#spot2').css('transform', 'rotate(0deg)');
+        $('#spot3').css('margin', '78px 111px 0 0');
+        $('#spot3').css('transform', 'rotate(180deg)');
+        $('#spot4').css('margin', '-204px -1px 0px 0px');
+        $('#spot4').css('transform', 'rotate(180deg)');
+
+        $('#spot5').attr('hidden', true);
+        $('#spot6').attr('hidden', true);
+        $('#spot7').attr('hidden', true);
+        $('#spot8').attr('hidden', true);
+        $('#spot9').attr('hidden', true);
+        $('#spot10').attr('hidden', true);
+
+    }else if(num == '5'){
+        $('#spot1').attr('hidden', false);
+        $('#spot2').attr('hidden', false);
+        $('#spot3').attr('hidden', false);
+        $('#spot4').attr('hidden', false);
+        $('#spot5').attr('hidden', false);
+
+        $('#spot1').css('margin', '-453px 0px 0px 69px');
+        $('#spot2').css('margin', '-204px 0px 0px 181px');
+        $('#spot2').css('transform', 'rotate(0deg)');
+        $('#spot3').css('margin', '78px 111px 0 0');
+        $('#spot3').css('transform', 'rotate(180deg)');
+        $('#spot4').css('margin', '-204px -1px 0px 0px');
+        $('#spot4').css('transform', 'rotate(180deg)');
+        $('#spot5').css('margin', '-367px 0px 0px 126px');
+
+        $('#spot6').attr('hidden', true);
+        $('#spot7').attr('hidden', true);
+        $('#spot8').attr('hidden', true);
+        $('#spot9').attr('hidden', true);
+        $('#spot10').attr('hidden', true);
+
+    }else if(num == '6'){
+        $('#spot1').attr('hidden', false);
+        $('#spot2').attr('hidden', false);
+        $('#spot3').attr('hidden', false);
+        $('#spot4').attr('hidden', false);
+        $('#spot5').attr('hidden', false);
+        $('#spot6').attr('hidden', false);
+
+        $('#spot1').css('margin', '-453px 0px 0px 69px');
+        $('#spot2').css('margin', '-204px 0px 0px 181px');
+        $('#spot2').css('transform', 'rotate(0deg)');
+        $('#spot3').css('margin', '78px 111px 0 0');
+        $('#spot3').css('transform', 'rotate(180deg)');
+        $('#spot4').css('margin', '-204px -1px 0px 0px');
+        $('#spot4').css('transform', 'rotate(180deg)');
+        $('#spot5').css('margin', '-367px 0px 0px 69px');
+        $('#spot6').css('margin', '-204px 0px 0px 182px');
+
+        $('#spot7').attr('hidden', true);
+        $('#spot8').attr('hidden', true);
+        $('#spot9').attr('hidden', true);
+        $('#spot10').attr('hidden', true);
+
+    }else if(num == '7'){
+        $('#spot1').attr('hidden', false);
+        $('#spot2').attr('hidden', false);
+        $('#spot3').attr('hidden', false);
+        $('#spot4').attr('hidden', false);
+        $('#spot5').attr('hidden', false);
+        $('#spot6').attr('hidden', false);
+        $('#spot7').attr('hidden', false);
+
+        $('#spot1').css('margin', '-440px 0px 0px 69px');
+        $('#spot2').css('margin', '-184px 0px 0px 187px');
+        $('#spot2').css('transform', 'rotate(0deg)');
+        $('#spot3').css('margin', '92px 118px 0px 0px');
+        $('#spot3').css('transform', 'rotate(180deg)');
+        $('#spot4').css('margin', '-184px 0 0px 0px');
+        $('#spot4').css('transform', 'rotate(180deg)');
+        $('#spot5').css('margin', '-320px 0px 0px 69px');
+        $('#spot6').css('margin', '-185px 0px 0px 187px');
+        $('#spot7').css('margin', '-253px 0px 0px 128px');
+
+        $('#spot8').attr('hidden', true);
+        $('#spot9').attr('hidden', true);
+        $('#spot10').attr('hidden', true);
+
+    }else if(num == '8'){
+        $('#spot1').attr('hidden', false);
+        $('#spot2').attr('hidden', false);
+        $('#spot3').attr('hidden', false);
+        $('#spot4').attr('hidden', false);
+        $('#spot5').attr('hidden', false);
+        $('#spot6').attr('hidden', false);
+        $('#spot7').attr('hidden', false);
+        $('#spot8').attr('hidden', false);
+
+        $('#spot1').css('margin', '-440px 0px 0px 69px');
+        $('#spot2').css('margin', '-184px 0px 0px 187px');
+        $('#spot2').css('transform', 'rotate(0deg)');
+        $('#spot3').css('margin', '92px 118px 0px 0px');
+        $('#spot3').css('transform', 'rotate(180deg)');
+        $('#spot4').css('margin', '-184px 0 0px 0px');
+        $('#spot4').css('transform', 'rotate(180deg)');
+        $('#spot5').css('margin', '-347px 0px 0px 69px');
+        $('#spot6').css('margin', '-185px 0px 0px 187px');
+        $('#spot7').css('margin', '-244px 0px 0px 128px');
+        $('#spot7').css('transform', 'rotate(0deg)');
+        $('#spot8').css('margin', '-27px 61px 0px 0');
+        $('#spot8').css('transform', 'rotate(180deg)');
+
+        $('#spot9').attr('hidden', true);
+        $('#spot10').attr('hidden', true);
+
+    }else if(num == '9'){
+        $('#spot1').attr('hidden', false);
+        $('#spot2').attr('hidden', false);
+        $('#spot3').attr('hidden', false);
+        $('#spot4').attr('hidden', false);
+        $('#spot5').attr('hidden', false);
+        $('#spot6').attr('hidden', false);
+        $('#spot7').attr('hidden', false);
+        $('#spot8').attr('hidden', false);
+        $('#spot9').attr('hidden', false);
+
+        $('#spot1').css('margin', '-447px 0px 0px 69px');
+        $('#spot2').css('margin', '-171px 0px 0px 195px');
+        $('#spot2').css('transform', 'rotate(0deg)');
+        $('#spot3').css('margin', '133px 128px 0px 0px');
+        $('#spot3').css('transform', 'rotate(180deg)');
+        $('#spot4').css('margin', '-171px 0px 0px 0');
+        $('#spot4').css('transform', 'rotate(180deg)');
+        $('#spot5').css('margin', '-392px 0px 0px 69px');
+        $('#spot6').css('margin', '-171px 0px 0px 196.6px');
+        $('#spot7').css('margin', '-34px 0px 0px 0');
+        $('#spot7').css('transform', 'rotate(180deg)');
+        $('#spot8').css('margin', '-171px 128px 0px 0px');
+        $('#spot8').css('transform', 'rotate(180deg)');
+        $('#spot9').css('margin', '-253px 0 0px 133px');
+
+        $('#spot10').attr('hidden', true);
+
+    }else if(num == '10'){
+        $('#spot1').attr('hidden', false);
+        $('#spot2').attr('hidden', false);
+        $('#spot3').attr('hidden', false);
+        $('#spot4').attr('hidden', false);
+        $('#spot5').attr('hidden', false);
+        $('#spot6').attr('hidden', false);
+        $('#spot7').attr('hidden', false);
+        $('#spot8').attr('hidden', false);
+        $('#spot9').attr('hidden', false);
+        $('#spot10').attr('hidden', false);
+
+        $('#spot1').css('margin', '-447px 0px 0px 69px');
+        $('#spot2').css('margin', '-171px 0px 0px 195px');
+        $('#spot2').css('transform', 'rotate(0deg)');
+        $('#spot3').css('margin', '133px 128px 0px 0px');
+        $('#spot3').css('transform', 'rotate(180deg)');
+        $('#spot4').css('margin', '-171px 0px 0px 0');
+        $('#spot4').css('transform', 'rotate(180deg)');
+        $('#spot5').css('margin', '-392px 0px 0px 69px');
+        $('#spot6').css('margin', '-171px 0px 0px 196.6px');
+        $('#spot7').css('margin', '-34px 0px 0px 0');
+        $('#spot7').css('transform', 'rotate(180deg)');
+        $('#spot8').css('margin', '-171px 128px 0px 0px');
+        $('#spot8').css('transform', 'rotate(180deg)');
+        $('#spot9').css('margin', '-346px 0 0px 133px');
+        $('#spot10').css('margin', '40px 64px 0px 0');
+        $('#spot10').css('transform', 'rotate(180deg)');
+
+    }
+    })
+
+    $("#naipe-letter-input").on("input", function () {
+    const lett = $("#naipe-letter-input").val();
+
+    if(lett == 'A' || lett == 'a'){
+        $('#spot1').attr('hidden', false);
+        $('#select-number-card').attr('hidden', false);
+
+        $('#spot1').css('margin', '-394px 0px 0px 92px');
+        $('#spot1').css('font-size', '250px');
+
+        $('#spot2').attr('hidden', true);
+        $('#spot3').attr('hidden', true);
+        $('#spot4').attr('hidden', true);
+        $('#spot5').attr('hidden', true);
+        $('#spot6').attr('hidden', true);
+        $('#spot7').attr('hidden', true);
+        $('#spot8').attr('hidden', true);
+        $('#spot9').attr('hidden', true);
+        $('#spot10').attr('hidden', true);
+
+    }else{
+        $('#select-number-card').attr('hidden', true);
+    }
+})
     //
     if (e == "24") {
         document.getElementById("button-03").style.display = "none";
@@ -345,6 +822,137 @@ $("select").change(function () {
     }
 
     //
+
+    // Configuração do estilo do naipe
+    if(e == "48.1" || e == "44.1" || e == "45.1" || e == "46.1" || e == "47.1"){
+        document.getElementById("lImg").style.display = "block";
+        document.getElementById("img-carta-select").style.display = "block";
+    }
+
+    if(e !== "48.1" && e == "44.1" || e == "45.1" || e == "46.1" || e == "47.1"){
+        $("#fImg1").attr("hidden", true);
+        $("#fImg2").attr("hidden", true);
+        $("#fImg3").attr("hidden", true);
+        $("#fImg4").attr("hidden", true);
+        $("#select-number-card").attr("hidden", false);
+        $("#img-carta").attr("hidden", true);
+
+        document.getElementById("iconimg-carta-select").style.display = "none";
+        document.getElementById("lIc").style.display = "none";
+    }
+
+    if (e == "44.1") {
+        $("#forma-icon1").html('&hearts;');
+        $("#forma-icon2").html('&hearts;');
+        $("#forma-icon3").html('&hearts;');
+        $("#forma-icon4").html('&hearts;');
+
+        $("#spot1").html('&hearts;');
+        $("#spot2").html('&hearts;');
+        $("#spot3").html('&hearts;');
+        $("#spot4").html('&hearts;');
+        $("#spot5").html('&hearts;');
+        $("#spot6").html('&hearts;');
+        $("#spot7").html('&hearts;');
+        $("#spot8").html('&hearts;');
+        $("#spot9").html('&hearts;');
+        $("#spot10").html('&hearts;');
+
+        $("#forma-icon1").css('margin-left', '8px')
+        $("#forma-icon2").css('margin-left', '295.7px')
+        $("#forma-icon3").css('margin-left', '291.7px')
+        $("#forma-icon4").css('margin-left', '3.5px')
+    }
+
+    if (e == "45.1") {
+        $("#forma-icon1").html('&clubs;');
+        $("#forma-icon2").html('&clubs;');
+        $("#forma-icon3").html('&clubs;');
+        $("#forma-icon4").html('&clubs;');
+
+        $("#spot1").html('&clubs;');
+        $("#spot2").html('&clubs;');
+        $("#spot3").html('&clubs;');
+        $("#spot4").html('&clubs;');
+        $("#spot5").html('&clubs;');
+        $("#spot6").html('&clubs;');
+        $("#spot7").html('&clubs;');
+        $("#spot8").html('&clubs;');
+        $("#spot9").html('&clubs;');
+        $("#spot10").html('&clubs;');
+
+        $("#forma-icon1").css('margin-left', '6px')
+        $("#forma-icon2").css('margin-left', '293.7px')
+        $("#forma-icon3").css('margin-left', '293.7px')
+        $("#forma-icon4").css('margin-left', '6px')
+
+    }
+
+    if (e == "46.1") {
+        $("#forma-icon1").html('&diams;');
+        $("#forma-icon2").html('&diams;');
+        $("#forma-icon3").html('&diams;');
+        $("#forma-icon4").html('&diams;');
+
+        $("#forma-icon1").css('margin-left', '12px')
+        $("#forma-icon2").css('margin-left', '298.5px')
+        $("#forma-icon3").css('margin-left', '287.5px')
+        $("#forma-icon4").css('margin-left', '1.4px')
+
+        $("#spot1").html('&diams;');
+        $("#spot2").html('&diams;');
+        $("#spot3").html('&diams;');
+        $("#spot4").html('&diams;');
+        $("#spot5").html('&diams;');
+        $("#spot6").html('&diams;');
+        $("#spot7").html('&diams;');
+        $("#spot8").html('&diams;');
+        $("#spot9").html('&diams;');
+        $("#spot10").html('&diams;');
+    }
+
+    if (e == "47.1") {
+        $("#forma-icon1").html('&spades;');
+        $("#forma-icon2").html('&spades;');
+        $("#forma-icon3").html('&spades;');
+        $("#forma-icon4").html('&spades;');
+
+        $("#forma-icon1").css('margin-left', '10px')
+        $("#forma-icon2").css('margin-left', '297.7px')
+        $("#forma-icon3").css('margin-left', '288.7px')
+        $("#forma-icon4").css('margin-left', '1px')
+
+
+        $("#spot1").html('&spades;');
+        $("#spot2").html('&spades;');
+        $("#spot3").html('&spades;');
+        $("#spot4").html('&spades;');
+        $("#spot5").html('&spades;');
+        $("#spot6").html('&spades;');
+        $("#spot7").html('&spades;');
+        $("#spot8").html('&spades;');
+        $("#spot9").html('&spades;');
+        $("#spot10").html('&spades;');
+    }
+
+
+    if (e == "48.1") {
+        document.getElementById("iconimg-carta-select").style.display = "block";
+        document.getElementById("lIc").style.display = "block";
+
+        $("#forma-icon1").html('');
+        $("#forma-icon2").html('');
+        $("#forma-icon3").html('');
+        $("#forma-icon4").html('');
+
+        $("#fImg1").attr("hidden", false);
+        $("#fImg2").attr("hidden", false);
+        $("#fImg3").attr("hidden", false);
+        $("#fImg4").attr("hidden", false);
+
+        $("#select-number-card").attr("hidden", true);
+        $("#img-carta").attr("hidden", false);
+    }
 
     var corB = $("#card").css("border-color");
 
@@ -974,6 +1582,32 @@ function readURL7(input) {
             $("#backcarta-img").attr("src", e.target.result);
             $("#backcarta-img").attr("style", "opacity: 1");
             $("#card-back").css("background-color", "transparent");
+        };
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+//Naipe
+$("#upload-iconimg-button").click(function () {
+    $("#selecao-arquivo-icon").trigger("click");
+});
+
+function readURLNaipe(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            var valB = $("#icon").css("border-radius");
+            $("#icon-img1").attr("src", e.target.result);
+            $("#icon-img2").attr("src", e.target.result);
+            $("#icon-img3").attr("src", e.target.result);
+            $("#icon-img4").attr("src", e.target.result);
+
+            $("#icon-img1").css("border-radius", valB);
+            $("#icon-img2").css("border-radius", valB);
+            $("#icon-img3").css("border-radius", valB);
+            $("#icon-img4").css("border-radius", valB);
         };
 
         reader.readAsDataURL(input.files[0]);

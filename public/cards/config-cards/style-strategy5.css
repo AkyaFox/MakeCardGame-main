@@ -1,3 +1,24 @@
+#class-style-select {
+  margin-top: 10px !important;
+}
+
+#backimg-classe-select {
+  margin-right:-57px !important;
+}
+
+#class-style-select,
+#skill-style-select,
+#backimg-classe-select,
+#class-border-select,
+#nome-classe-input,
+#atributos-carta-input,
+#atributos-carta-input2,
+#descricao-carta-input,
+#descricao-carta-input2,
+#classe-url-carta-input {
+  width: 63.6% !important;
+}
+
 /* card config */
 
 .arumation {
@@ -18,7 +39,7 @@
 
 #background-carta{
     position: absolute;
-    margin: -575px 0 0 -2px;
+    margin: -607px 0 0 -2px;
     background-size: cover;
     z-index: -2;
     width: 355px;
@@ -28,7 +49,7 @@
 }
 
 .nome-carta {
-    width: 80%;
+    width: 74%;
     height: 10%;
     position: absolute;
     text-align: center;
@@ -38,7 +59,7 @@
     padding-top: 17px;
     border-radius: 8px;
     word-wrap: break-word;
-    margin-left: 26px;
+    margin-left: 11px;
     z-index: 1;
 }
 
@@ -46,31 +67,33 @@
 #top-name-config-img,
 #name-border {
     position: absolute;
-    width: 314px;
+    border-radius: 8px 8px 8px 2px;
+    width: 265px;
     height: 50px;
     opacity: 1;
 }
 
-#name-border{
-    margin: 5px 0 0 14px;
+#top-name-config {
+    margin: 1px 0 0 -5px;
 }
 
-#top-name-config {
-    margin: 0 0 0 -13px;
+#name-border {
+    margin: 4.6px 0 0 8px;
+    z-index: 0;
 }
 
 #top-name-config-img {
-    margin: 0;
+    margin: 0.6px 0 0 0px;
     z-index: -1;
 }
 .custo-mana {
     font-size: 20px;
-    margin: -1.3px 0 0 0px;
+    margin: 54.3px 0 0 8px;
     width: 11%;
     text-align: center;
     color: floralwhite;
     font-weight: bolder;
-    border-radius: 11px 8px 8px 8px;
+    border-radius: 2px 8px 8px 8px;
     z-index: 2;
     position: absolute;
 }
@@ -81,9 +104,9 @@
 
 .imagem-carta {
     border: 2px solid black;
-    height: 49%;
-    width: 91%;
-    margin: 5px 0 0 14px;
+    height: 65.2%;
+    width: 95%;
+    margin: -51px 0 0 7px;
 }
 
 .imagem-carta img {
@@ -101,7 +124,7 @@
     height: 12%;
     position: absolute;
     z-index: 2;
-    margin: 40px 0 0 276px;
+    margin: 27px 0 0 276px;
 }
 
 #icon {
@@ -126,65 +149,44 @@
 }
 
 #classI {
-   width: 143px;
+   width: 240px;
    height: 42px;
    position: absolute;
    text-align: center;
    color: floralwhite;
    font-weight: bolder;
    padding-top: 5px;
-   border-radius: 23px 23px 23px 23px;
-   margin: -18.5px 0 0 104.3px;
+   border-radius: 2px 23px 2px 28px;
+   margin: -41.5px 0 0 100.7px;
    z-index: 1;
 }
 
 #class-img {
     width: 100.2%;
     height: 111.7%;
-    border-radius: 23px 23px 23px 23px;
+    border-radius: 2px 23px 2px 28px;
     margin: -226px 0 -20px 0px;
 }
 
 .classe-carta {
-    margin: -15px 0 0 103.9px;
+    margin: -37px 0 0 109.9px;
     position: absolute;
     z-index: 2;
     height: 42px;
-    width: 145px;
-    border-radius: 23px 23px 23px 23px;
-}
+    width: 225px;
+    border-radius: 2px 23px 2px 28px;
+    }
 
 #class-name {
-    margin: 7px 0 0 0px;
+    margin-top: 5px;
     text-align: center;
     color: floralwhite;
-}
-
-#skillI{
-    width: 325px;
-    height: 170px;
-    position: absolute;
-    text-align: center;
-    color: floralwhite;
-    font-weight: bolder;
-    padding-top: 5px;
-    margin: 147.5px 0 0 -4px;
-    z-index: -1;
-}
-
-#skill-img{
-    width: 101.1%;
-    height: 110.7%;
-    margin: -154px 0 -22px -164px;
-    position: absolute;
 }
 
 .config-descricao-carta {
-    background-color: rgba(155, 155, 155, 0.46);
-    border: 2px solid black;
     height: 80%;
     max-width: 95%;
-    margin: -5px 0 0 8px;
+    margin: -2px 0 0 8px;
     color: floralwhite;
     font-weight: bold;
     padding-left: 1%;
@@ -201,31 +203,4 @@
     font-weight: bolder;
     padding-top: 5%;
     font-size: 14px;
-}
-
-.config-status {
-    color: floralwhite;
-    font-weight: bold;
-    word-wrap: normal;
-    border: 2px solid black;
-    font-size: 15px;
-    margin: 2px 0 0 8px;
-    width: 328px;
-    height: 21px;
-}
-
-#atk {
-    margin: -1.7px 0px 0 23px;
-}
-
-#atk-value {
-    margin: -20px 0 0 65px;
-}
-
-#def {
-    margin: -20px 110px 0 210px;
-}
-
-#def-value {
-    margin: -20px 0 0 251px;
 }

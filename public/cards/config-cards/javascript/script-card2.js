@@ -58,7 +58,6 @@
         if (e == "37") {
         $("#forma-icon").css("margin-top", "40px");
     }
-
         if (e == "38") {
         $("#forma-icon").css("margin-top", "42px");
     }
@@ -128,5 +127,24 @@
         $("#def").css("margin-left", "131px");
         $("#def-value").css("margin-left", "175px");
     }
+
+    if (e == "00") {
+        $(".config-status").css("border", "none");
+    }
+
+    if(e == "36.9"){
+        $(".config-status").css("border", "2px solid");
+        $(".config-status").css("border-color", corB);
+        $("#atk").css("margin-top", "-1.7px");
+    }
+
+        if(e == "36.10"){
+        $(".config-status").css("border", "none");
+        $("#atk").css("margin-top", "1px");
+        }
+
+    $("#cor-carta-input").change(function () {
+        $(".config-status").css("border-color", $(this).val());
+    });
 
     });

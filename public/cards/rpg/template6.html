@@ -48,11 +48,11 @@
 			<span class="material-icons" id= "btnIcon">sports_esports</span> Games
 			</a>
 			
-			<a href="../../profile.html">
+			<a id="prof" href="../../profile.html">
 			<span class="material-icons" id= "btnIcon">person</span> Account
 			</a>
 						
-			<ul  class="menu-more">
+			<ul id="menu-more" class="menu-more">
 			<li>
 			<a href="#"> <span class="material-icons">expand_more</span> More </a>
 				<ul>
@@ -353,16 +353,7 @@
 							<table>
 								<td id="td-back">
 
-								<label id="lSBack" for="sBack">Card Back Style</label>
-								<select id="back-style-select" name="sBack">
-								  <option value=""disabled selected>Select a style for the card back</option>
-								  <option value="51">Style 1(Default)</option>
-								  <option value="52">Style 2</option>
-								  <option value="53">Style 3</option>
-								</select>
-								<br>
-
-							  <label id="lBack" hidden for="bImage">Card Back Image</label>
+							  <label id="lBack" for="bImage">Card Back Image</label>
 							  <select id="img-backcarta-select" name="bImage" >
 								<option value=""disabled selected>Select the card back image</option>
 								<option value="1.1"> Upload from computer</option>
@@ -492,6 +483,9 @@
 				<button id="button-03">Download Card Front</button>
 				<button id="button-031">Download Card Back</button>
 			</div>
+			<p name="msg-01" style="display: none;">Card saved, check out your profile</p>
+			<p name="msg-err-login" style="display: none;">You need to login to save a card!</p>
+			<p name="msg-err-name" style="display: none;">Cannot save card without a name!</p>
 			
 </div>
 
@@ -508,4 +502,109 @@
 	</p>
 </footer><!--fim do rodapé-->
 </body>
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+		<script type="module" src="https://www.gstatic.com/firebasejs/9.0.0/firebase-storage.js"></script>
+		<script type="module">
+		
+			import { initializeApp, getApp } from 'https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js';
+			import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js';
+			import { getFirestore, collection, doc, setDoc, getDoc, updateDoc, arrayUnion, getDocs, serverTimestamp } from 'https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js';
+			import { getStorage, ref, uploadBytes, getDownloadURL, getMetadata } from 'https://www.gstatic.com/firebasejs/9.13.0/firebase-storage.js';
+			const firebaseApp = initializeApp({
+			apiKey: "AIzaSyAR61dkpsiGFCQRzCQ4nkAbU0plC-kYslY",
+			authDomain: "make-cardgame.firebaseapp.com",
+			projectId: "make-cardgame",
+			storageBucket: "make-cardgame.appspot.com",
+			messagingSenderId: "1016341861949",
+			appId: "1:1016341861949:web:c95383455399adf6597c54",
+			measurementId: "G-RBP9Q9N1ES"
+			});
+
+			const db = getFirestore(firebaseApp);
+
+			const auth = getAuth(firebaseApp);
+
+			const bttn = document.getElementById('button');
+
+			const user = auth.currentUser;
+
+			const storage = getStorage(); 
+
+
+			bttn.addEventListener('click', function () {
+			
+				onAuthStateChanged(auth, (user) => {
+			if (user) {
+
+				const cardName= document.getElementById("nome-carta-input").value;
+				const user = auth.currentUser;
+				const uid = user.uid;
+				const storageRef = ref(storage, 'card-pic/'+`${user.uid}` + `/${cardName}`);
+
+				if(cardName !== ''){
+				domtoimage.toBlob(document.getElementById("card"))
+					.then(function(blob){
+
+				uploadBytes(storageRef, blob).then((snapshot) => {
+				console.log('Uploaded a blob or file!');
+
+				document.querySelector('[name= msg-err-login]').style='display: none';
+				document.querySelector('[name= msg-err-name]').style='display: none';
+				document.querySelector('[name= msg-01]').style='display: block;'+
+					'text-align: center;'+
+					'width: 263px;'+
+					'position: absolute;'+
+					'margin: -831px 0px 0px 877px;'+
+					'color: green;';
+                })
+			})
+				}else{
+					document.querySelector('[name= msg-err-login]').style='display: none';
+					document.querySelector('[name= msg-err-name]').style='display: block;'+
+					'text-align: center;'+
+					'width: 263px;'+
+					'position: absolute;'+
+					'margin: -831px 0px 0px 877px;'+
+					'color: red;';
+					console.log('name required');
+				}
+		}else{
+			document.querySelector('[name= msg-err-name]').style='display: none';
+			document.querySelector('[name= msg-err-login]').style='display: block;'+
+					'text-align: center;'+
+					'width: 263px;'+
+					'position: absolute;'+
+					'margin: -831px 0px 0px 877px;'+
+					'color: red;';
+			console.log('login required!!!');
+			}
+		})
+	}) 
+
+	onAuthStateChanged(auth, (user) => {
+			if (user) {
+                    document.getElementById("prof").style =
+                        "display: block;"+
+						'color: white;'+
+						'font-size: 14px;'+
+						'text-decoration: none;'+
+						'background-color: #2b2b2b;'+
+						'padding: 2px;'+
+						'border-radius: 5px;'+
+						'margin: -31px 0px 0px 206px;'+
+						'width: 110px;'+
+						'height: 40px;';
+                    document.getElementById("menu-more").style =
+                         "margin: -43px 0 0 330px;";
+                        
+                } else {
+                    document.getElementById("prof").style =
+                        "display: none;";
+                    document.getElementById("menu-more").style =
+                         "margin: -33px 0 0 199px;";
+                }
+			})
+			</script>
 </html>

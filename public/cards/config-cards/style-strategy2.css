@@ -1,3 +1,24 @@
+#skill-style-select {
+  margin-top: 12px !important;
+  margin-bottom: 20px !important;
+}
+
+#atributos-carta-input, #descricao-carta-input {
+  margin-top: -10px !important;
+}
+
+#descricao-carta-input {
+margin-bottom: 20px !important;
+}
+
+#backimg-carta-select {
+  margin-left: 63px !important;
+}
+
+.input-text-color {
+  margin-top: -2px !important;
+}
+
 /* card config */
 
 .arumation {
@@ -18,7 +39,7 @@
 
 #background-carta{
     position: absolute;
-    margin: -575px 0 0 -2px;
+    margin: -302px 0 0 -2px;
     background-size: cover;
     z-index: -2;
     width: 355px;
@@ -28,7 +49,7 @@
 }
 
 .nome-carta {
-    width: 74%;
+    width: 85%;
     height: 10%;
     position: absolute;
     text-align: center;
@@ -38,7 +59,7 @@
     padding-top: 17px;
     border-radius: 8px;
     word-wrap: break-word;
-    margin-left: 11px;
+    margin-left: 22px;
     z-index: 1;
 }
 
@@ -46,8 +67,7 @@
 #top-name-config-img,
 #name-border {
     position: absolute;
-    border-radius: 8px 8px 8px 2px;
-    width: 265px;
+    width: 319px;
     height: 50px;
     opacity: 1;
 }
@@ -57,7 +77,7 @@
 }
 
 #name-border {
-    margin: 4.6px 0 0 8px;
+    margin: 4.6px 0 0 14px;
     z-index: 0;
 }
 
@@ -81,81 +101,20 @@
     height: 10%;
 }
 
-.imagem-carta {
-    border: 2px solid black;
-    height: 50%;
-    width: 91%;
-    margin: 0px 0 0 14px;
-}
-
-.imagem-carta img {
-    height: 100%;
-    width: 100%;
-}
-
 .rodape-carta {
     height: 45%;
     padding-top: 3%;
 }
 
-#forma-icon{
-    width: 19%;
-    height: 12%;
-    position: absolute;
-    z-index: 2;
-    margin: 27px 0 0 276px;
-}
-
-#icon {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    color: floralwhite;
-    font-weight: bolder;
-    padding-top: 5px;
-    border-radius: 35px;
-}
-
-.iIcon {
-    width: 100%;
-    height: 100%;
-}
-
-#icon-img{
-    width: 100%;
-    height: 100%;
-    border-radius: 35px;
-}
-
-#classI {
-   width: 143px;
-   height: 42px;
-   position: absolute;
-   text-align: center;
-   color: floralwhite;
-   font-weight: bolder;
-   padding-top: 5px;
-   border-radius: 2px 23px 2px 28px;
-   margin: -17.5px 0 0 198.7px;
-   z-index: 1;
-}
-
-#class-img {
-    width: 100.2%;
-    height: 111.7%;
-    border-radius: 2px 23px 2px 28px;
-    margin: -226px 0 -20px 0px;
-}
-
 #skillI{
     width: 325px;
-    height: 170px;
+    height: 73px;
     position: absolute;
     text-align: center;
     color: floralwhite;
     font-weight: bolder;
     padding-top: 5px;
-    margin: 147.5px 0 0 -4px;
+    margin: 148.5px 0 0 -4px;
     z-index: -1;
 }
 
@@ -166,27 +125,12 @@
     position: absolute;
 }
 
-.classe-carta {
-    margin: -14px 0 0 198.9px;
-    position: absolute;
-    z-index: 2;
-    height: 42px;
-    width: 145px;
-    border-radius: 2px 23px 2px 28px;
-}
-
-#class-name {
-    margin-top: 5px;
-    text-align: center;
-    color: floralwhite;
-}
-
 .config-descricao-carta {
     background-color: rgba(155, 155, 155, 0.46);
     border: 2px solid black;
-    height: 80%;
+    height: 35%;
     max-width: 95%;
-    margin: -2px 0 0 8px;
+    margin: 389px 0 0 8px;
     color: floralwhite;
     font-weight: bold;
     padding-left: 1%;
@@ -205,26 +149,6 @@
     font-size: 14px;
 }
 
-.config-status {
-    color: floralwhite;
-    font-weight: bold;
-    word-wrap: normal;
-    font-size: 15px;
-    margin: -10px 0 0 0;
-}
-
-#atk {
-    margin: 10.5px 0px 0 23px;
-}
-
-#atk-value {
-    margin: -20px 0 0 65px;
-}
-
-#def {
-    margin: -20px 110px 0 210px;
-}
-
-#def-value {
-    margin: -20px 0 0 251px;
+#descricao-carta {
+  margin: 25px 0 0 0;
 }

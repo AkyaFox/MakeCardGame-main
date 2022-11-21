@@ -50,7 +50,7 @@
 //Customização de elemento
 
     if(e != "39" && e == "37" || e == "38" || e == "49"){
-        $("#forma-icon").css("margin", "40px 0 0 5px");
+        $("#forma-icon").css("margin-left", "280px");
         $("#icc").css("margin", "0");
     }
 
@@ -66,7 +66,7 @@
         $("#forma-icon").attr("hidden", false);
         $("#forma-icon").css("width", "56px");
         $("#forma-icon").css("height", "56px");
-        $("#forma-icon").css("margin", "45px 0 0 8px");
+        $("#forma-icon").css("margin", "45px 0 0 280px");
 
         $("#icc").css("width", "78px");
         $("#icc").css("height", "80px");
@@ -74,7 +74,7 @@
         }
 
         if (e == "49") {
-        $("#forma-icon").css("margin", "37px");
+        $("#forma-icon").css("margin-top", "37px");
     }
     //
 

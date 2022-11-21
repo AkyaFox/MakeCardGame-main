@@ -76,15 +76,19 @@
         $("#def").css("margin-left", "223px");
         $("#def-value").css("margin-left", "265px");
     }
-    if (e == "21") {
+        if (e == "21") {
         $("#atk").css("margin-left", "19px");
         $("#atk-value").css("margin-left", "62px");
         $("#def").css("margin-left", "131px");
         $("#def-value").css("margin-left", "175px");
     }
-  /*  if (e == "22") {
+
+        if(e == "36.11"){
+        $("#top-name-config-img")("margin", "-0.4px 0 0 -2px");
     }
 
-     if (e == "23") {
-    }*/
+        if(e == "36.12"){
+        $("#top-name-config-img")("margin", "0.6px 0 0 0px");
+    }
+
     });

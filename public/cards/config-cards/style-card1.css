@@ -27,17 +27,6 @@
     border: 2px solid black;
 }
 
-#backcarta-img {
-    position: absolute;
-    margin: -2px 0 0 -2px;
-    background-size: cover;
-    z-index: -2;
-    width: 350px;
-    height: 550px;
-    border-radius: 3%;
-    border: 2px solid black;
-}
-
 .nome-carta {
     width: 88%;
     height: 10%;
@@ -158,22 +147,22 @@
     margin: -226px 0 -20px 0px;
 }
 
-#skillI{
+#skillI {
     width: 294px;
-    height: 170px;
+    height: 188px;
     position: absolute;
     text-align: center;
     color: floralwhite;
     font-weight: bolder;
     padding-top: 5px;
-    margin: 147.5px 0 0 -4px;
+    margin: 148.5px 0 0 12px;
     z-index: -1;
 }
 
 #skill-img{
     width: 101.1%;
-    height: 110.7%;
-    margin: -154px 0 -22px -164px;
+    height: 111.7%;
+    margin: -155px 0 -22px -163px;
     position: absolute;
 }
 
