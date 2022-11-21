@@ -123,6 +123,10 @@ header {
     display: block;
 }
 
+#prof:hover{
+    color: #878787;
+}
+
 .menu-more > li {
     float: left;
 }

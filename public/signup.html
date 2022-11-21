@@ -24,21 +24,21 @@
                         <table name='table'>
                             <td>
                                 <li>
-                                    <label>Nickname:</label>
+                                    <label style=" margin: 0px -18px -16px -3px; display: block;">Nickname:</label>
                                     <input id='nick' name='nickname' type='text' placeholder='User Name'/>
                                 </li>
 
                                 <li>
-                                    <label for='pass'>Age:</label>
+                                    <label for='pass' style=" display: block; margin: 18px 0px -27px -21px;">Age:</label>
                                     <input id='userAge' name='age' type='number' min="0" max="99" maxlength="2" placeholder='Your Age' oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"/>
                                 </li>
 
                                 <li>
-                                    <label for='email'>Email:</label>
+                                    <label for='email' style=" display: block; margin: 19px 0 -25px -14px;">Email:</label>
                                     <input id='email' name='email' type='text' placeholder='Email'/>
                                 </li>
                                 <li>
-                                    <label for='pass'>Password:</label>
+                                    <label for='pass' style=" display: block; margin: 12px 0 -28px 17px;">Password:</label>
                                     <input id='pass' name='password' type='password' placeholder='Password'/>
                                 </li>
                             </td>
@@ -51,6 +51,8 @@
                         </ul>
 
                         <p name="msg-1" style="display: none;">Account Register Successful, go to Sign in Page</p>
+                        <p name="msg-2"  style="display: none;">Invalid Email or Password!</p>
+                        <p name="msg-3"  style="display: none;">Too weak password! Must have at least 6 characters!</p>
                     </form>
                 </div>
                 <!-- signup -->
@@ -124,17 +126,48 @@
                             })
                             .catch(console.log)                  
 
+                            
+                        document.querySelector('[name= msg-2]').style='display: none;';
+                        document.querySelector('[name= msg-3]').style='display: none;'
+
                         document.querySelector('[name= msg-1]').style='display: block;'+
 					'text-align: center;'+
 					'width: 218px;'+
 					'position: absolute;'+
-					'margin: -120px 0px 0px 145px;'+
+					'margin: -120px 0px 0px 115px;'+
 					'color: green;'+
                     'z-index: 2;';
 
                     document.querySelector('[name= gtSign]').style = 'margin-top: 51px';
                     })
-                    .catch((e) => alert(e.message));
+                    .catch((e) =>{
+                         console.log(e.message);
+                    if(e.message == 'Firebase: Error (auth/invalid-email).'){
+                        document.querySelector('[name= msg-1]').style='display: none;';
+                        document.querySelector('[name= msg-3]').style='display: none;'
+
+                        document.querySelector('[name= msg-2]').style='display: block;'+
+					'text-align: center;'+
+					'width: 218px;'+
+					'position: absolute;'+
+					'margin: -151px 0px 0px 113px;'+
+					'color: red;'+
+                    'z-index: 2;';
+
+                    }else if(e.message == 'Firebase: Password should be at least 6 characters (auth/weak-password).'){
+                        document.querySelector('[name= msg-1]').style='display: none;';
+                        document.querySelector('[name= msg-2]').style='display: none;';
+
+                        document.querySelector('[name= msg-3]').style='display: block;'+
+                        'text-align: center;'+
+                        'width: 218px;'+
+                        'position: absolute;'+
+                        'margin: -160px 0px 0px 113px;'+
+                        'color: red;'+
+                        'z-index: 2;';
+                    }
+                    
+                })
             });
         });
     </script>

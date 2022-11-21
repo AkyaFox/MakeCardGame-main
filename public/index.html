@@ -35,8 +35,6 @@
 					<input id="pass" name="password" type="password" placeholder="Password" ></li>
 
 					<p name="error-01" style="display: none;">Invalid Email or Password!</p>
-					<p name="error-02" style="display: none;">Invalid Characteres</p>
-					<p name="error-03" style="display: none;">Invalid Email!</p>
 
 	
 					<!--<li><a id="remember" href="home.html">Forgot Password</a></li>	-->
@@ -49,8 +47,8 @@
 					<div class="options">
 						<p> New Here? </p>
 					<button id="btn-02" type="submit" onclick="location.href='signup.html'">Create Account</button>
-						<p> or </p>
-					<button id="btn-03" type="submit" onclick="location.href='home.html'">Enter as a Visitor</button>
+					<p> Or </p>
+					<button id="btn-03" type="submit">Enter as Visitor</button>
 					</div>
 				</td>
 			</table>
@@ -69,7 +67,7 @@
 
 	<script type="module">
 		import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js';
-		import { getAuth, signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js';
+		import { getAuth, signInWithEmailAndPassword, signInAnonymously } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js';
 	const firebaseApp = initializeApp({
 	  apiKey: "AIzaSyAR61dkpsiGFCQRzCQ4nkAbU0plC-kYslY",
 	  authDomain: "make-cardgame.firebaseapp.com",
@@ -99,6 +97,10 @@
     		const errorMessage = error.message;
 			console.log(errorCode + errorMessage);
   			});
+		})
+
+		document.getElementById("btn-03").addEventListener("click", function(){
+					window.location.href = '/home.html';
 		})
 
 	</script>

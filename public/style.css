@@ -22,7 +22,7 @@
 #img2 {
     rotate: 13deg;
     position: relative;
-    top: -159px;
+    top: -127px;
     left: 610px;
 }
 
@@ -40,7 +40,7 @@ p {
 
 .configcarousel {
     max-width: 1100px;
-    margin: 0 auto;
+    margin: -30px auto;
     padding: 0 2%;
     display: flex;
 }
@@ -84,11 +84,12 @@ p {
 }
 
 #title {
-    margin: -57px 0 0 100px;
+    margin: -97px 0 0 100px;
     padding: 10px;
     text-align: center;
     border: 2px solid #878787;
     border-radius: 5px;
+    height: 60px;
 }
 
 /* Fim da configuração do main */
